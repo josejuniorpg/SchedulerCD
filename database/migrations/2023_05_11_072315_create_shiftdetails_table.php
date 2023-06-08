@@ -15,9 +15,16 @@ class CreateShiftdetailsTable extends Migration
     {
         Schema::create('shiftdetails', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('shift_id')->unsigned(); #foreign key
+            $table->bigInteger('scheduler_id')->unsigned(); #foreign key
+            $table->bigInteger('matter_id')->unsigned(); #foreign key
+            $table->bigInteger('classmate_id')->unsigned(); # foreign key
+            $table->string('notes');
+            $table->string('modality');
+            $table->string('status');
+            $table->string('group');
+            $table->string('day');
             $table->timestamps();
-            $table->bigInteger('shift_id')->unsigned();
-
             $table->foreign('shift_id')->references('id')->on('shifts')->onDelete('cascade');
         });
     }

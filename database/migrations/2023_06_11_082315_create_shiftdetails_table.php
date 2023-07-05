@@ -25,10 +25,10 @@ class CreateShiftdetailsTable extends Migration
             $table->string('group');
             $table->string('day');
             $table->timestamps();
-            $table->foreign('shift_id')->references('id')->on('shifts')->onDelete('cascade');
-            $table->foreign('scheduler_id')->references('id')->on('schedulers')->onDelete('cascade');
-            $table->foreign('matter_id')->references('id')->on('matters')->onDelete('cascade');
-            $table->foreign('classmate_id')->references('id')->on('classmates')->onDelete('cascade');
+            #$table->foreign('shift_id')->references('id')->on('shifts')->onDelete('cascade');
+            #$table->foreign('scheduler_id')->references('id')->on('schedulers')->onDelete('cascade');
+            #$table->foreign('matter_id')->references('id')->on('matters')->onDelete('cascade');
+            #$table->foreign('classmate_id')->references('id')->on('classmates')->onDelete('cascade');
         });
     }
 
